@@ -1,0 +1,22 @@
+numpy
+pandas
+# tensorflow
+matplotlib
+seaborn
+scikit-learn
+imbalanced-learn
+mlflow==2.2.2
+notebook
+python-box==6.0.2
+pyYAML
+dvc
+tqdm
+ensure==1.0.2
+joblib
+types-PyYAML
+Flask
+Flask-Cors
+catboost
+xgboost
+
+-e .
