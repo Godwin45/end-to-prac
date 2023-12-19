@@ -1,6 +1,7 @@
 from engineProject.constants import *
 from engineProject.utils.common import read_yaml, create_directories
-from engineProject.entity.config_entity import (DataIngestionConfig)
+from engineProject.entity.config_entity import (DataIngestionConfig,
+                                                DataCleaningConfig)
 
 
 class ConfigurationManager:
@@ -30,4 +31,17 @@ class ConfigurationManager:
             unzip_dir=config.unzip_dir 
         )
 
-        return data_ingestion_config
+        return data_ingestion_config\
+        
+    def get_cleaned_data_config(self) -> DataCleaningConfig:
+        config = self.config.data_cleaning
+
+        create_directories([config.root_dir])
+
+        data_cleaning_config = DataCleaningConfig(
+            root_dir=config.root_dir,
+            cleaned_data=config.cleaned_data,
+            unzip_data_dir = config.unzip_data_dir,
+        )
+
+        return data_cleaning_config
