@@ -1,1 +1,12 @@
-key: value
+COLUMNS:
+  Engine rpm: int64  
+  Lub oil pressure: float64
+  Fuel pressure: float64
+  Coolant pressure: float64
+  lub oil temp: float64
+  Coolant temp: float64
+
+
+TARGET_COLUMN:
+  name: Engine Condition
+  
